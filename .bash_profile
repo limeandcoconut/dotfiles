@@ -130,14 +130,6 @@ alias devtool=getdevtoollink
 #alias watch='sass --watch scss:css --sourcemap=none'
 alias caffeinate="echo 'caffeinate hack...' && pmset noidle"
 
-#alias sshdev='ssh devadmin@southernoregonupholstery.com'
-#alias sshret='ssh root@104.131.133.198'
-#alias sshmean='ssh root@159.203.242.176'
-#alias sshkamp='ssh root@104.131.131.209'
-#alias sshsnap='ssh web@snapbeta.com'
-#alias sshdev='ssh ec2-user@52.39.77.137 -i ~/ec2windows.pem'
-#alias sshtbot='ssh admin@54.68.229.170 -i ~/tbot.pem'
-
 #rf() {
 #    echo -e $'Are you sure you want to delete \e[31m' $(realpath $1) $'\e[0m?'
 #
