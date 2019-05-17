@@ -8,6 +8,7 @@ module.exports = {
         'vue',
     ],
     rules: {
-        indent: [2, 4, {MemberExpression: 0}],
+        'indent': [2, 4, {MemberExpression: 0}],
+        'operator-linebreak': ['error', 'after', {overrides: {'?': 'before', ':': 'before'}}],
     },
 }

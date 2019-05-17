@@ -1,0 +1,37 @@
+
+
+# Use this to install your bootstrap on a server
+#shup() {
+#    cat ~/.bash_bootstrap | ssh $1 "[[ -f .bash_profile ]] && f=.bash_profile || f=.profile && cat >> \$f"
+#}
+
+alias ls="ls -lah"
+alias ll="ls -lah"
+alias count='ls | wc -l'
+
+lg() {
+     ll | grep $1
+}
+
+#alias vimba="vim ~/.bash_profile"
+alias vimba="[[ -f ~/.bash_profile ]] && vim ~/.bash_profile || vim ~/.profile"
+alias rba="[[ -f ~/.bash_profile ]] && . ~/.bash_profile || . ~/.profile"
+
+alias down="docker-compose down"
+alias dup="docker-compose up -d"
+alias up="docker-compose up"
+
+alias dev="npm run dev"
+
+run() {
+    docker-compose run $1
+}
+
+alias please='sudo $(history -p \!\!)'
+
+alias mip='ipconfig getifaddr en0 | pbcopy && ipconfig getifaddr en0'
+
+alias getpb='sudo apt-get install xclip -y'
+
+alias pbcopy='command -v pbcopy | grep -v alias 2>/dev/null && pbcopy || xclip -selection clipboard'
+alias pbpaste='command -v pbpaste | grep -v alias 2>/dev/null && pbpaste || xclip -selection clipboard -o'
