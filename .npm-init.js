@@ -6,7 +6,7 @@ let name = basename || package.name
 let repo
 
 module.exports = {
-    
+
     name: prompt('name', name, (response) => {
         name = response
         repo = `github.com/${USER}/${name}`
@@ -27,7 +27,7 @@ module.exports = {
 
         if (response) {
             let data = JSON.stringify({
-                name, 
+                name,
                 private: isPrivate
             })
             console.log('\nenter github password:')
@@ -51,7 +51,7 @@ module.exports = {
 
     keywords: prompt((string) => string.split(/\s+/)),
 
-    license: 'isc',
+    license: 'ISC',
 
     cleanup: (cb) => {
         cb(null, undefined)
