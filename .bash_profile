@@ -14,7 +14,10 @@ shup() {
 
 eval "`npm completion`"
 
-#alias cds='cd ~/Sites/'
+alias cdp='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-payhub-ui'
+alias cdpv='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-payhub-vue'
+alias cde='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-e-wallet-ui'
+alias cdev='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-e-wallet-vue'
 alias cdd='cd ~/Desktop/ && ll'
 alias cdn='cd ~/Notes && ll'
 alias cn='code ~/Notes/notes.md'
@@ -55,7 +58,7 @@ alias rba='. ~/.bash_profile'
 alias caffeinate="echo 'caffeinate hack...' && pmset noidle"
 
 githubclone() {
-    git clone git@github.com:limeandcoconut/$1.git $2 
+    git clone git@github.com:limeandcoconut/$1.git $2
 }
 
 clonedot() {
