@@ -102,7 +102,8 @@ nm() {
 }
 
 #export PS1="iMac:\w▲ "
-export PS1="mac:\w👾 "
+# export PS1="mac:\w👾 "
+source ~/.gargula
 
 getdevtoollink() {
     #while read line; do
