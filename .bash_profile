@@ -18,6 +18,8 @@ alias cdp='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-payhub-ui'
 alias cdpv='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-payhub-vue'
 alias cde='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-e-wallet-ui'
 alias cdev='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-e-wallet-vue'
+alias cda='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-announcements-ui'
+alias cdav='cd ~/Sites/gsg-payhub-ui-mono/packages/gsg-announcements-vue'
 alias cdd='cd ~/Desktop/ && ll'
 alias cdn='cd ~/Notes && ll'
 alias cn='code ~/Notes/notes.md'
@@ -46,7 +48,7 @@ alias md='ll | grep \.md'
 alias mds='ll ~/Notes | grep .md'
 
 lg() {
-     ll | grep $1
+    ll | grep $1
 }
 
 alias search='lg'
@@ -57,12 +59,29 @@ alias pbpaste='pbpaste || xclip -selection clipboard -o'
 alias rba='. ~/.bash_profile'
 alias caffeinate="echo 'caffeinate hack...' && pmset noidle"
 
+function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
+
 githubclone() {
     git clone git@github.com:limeandcoconut/$1.git $2
 }
 
 clonedot() {
     githubclone $1 .
+}
+
+grb() {
+    git rebase --interactive HEAD~$1
+}
+
+alias grh="grb"
+alias grc="git rebase --continue"
+alias gcane="git commit --amend --no-edit"
+alias gfw="git push --force-with-lease"
+alias gpfwl="git push --force-with-lease"
+alias gfwl="git push --force-with-lease"
+
+gitlog() {
+    git log -p -- $1
 }
 
 tag() {
